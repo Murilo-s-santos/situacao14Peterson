@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Música - SESI Beats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Container Principal do Player -->
+  <main class="player-card">
+    
+    <!-- Container da Capa do Álbum -->
+    <div class="cover-container">
+      <span class="status-badge" id="status-badge">Pausado</span>
+      <img id="album-cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="Capa do Álbum">
+    </div>
+
+    <!-- Informações da Faixa -->
+    <section class="track-info">
+      <h1 class="track-title" id="track-title">Musica Boa</h1>
+      <p class="track-artist" id="track-artist">SESI Beats</p>
+    </section>
+
+    <!-- Barra de Progresso e Tempos -->
+    <section class="progress-section">
+      <div class="progress-bar-wrapper" id="progress-wrapper">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="time-labels">
+        <span id="current-time">0:00</span>
+        <span id="duration-time">6:12</span>
+      </div>
+    </section>
+
+    <!-- Elemento de Áudio Oculto -->
+    <audio id="audio-player"></audio>
+
+    <!-- Controles do Player -->
+    <section class="controls">
+      <!-- Botão Retroceder -->
+      <button class="btn-control" id="prev-btn" title="Retroceder">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+        </svg>
+      </button>
+
+      <!-- Botão Play / Pause -->
+      <button class="btn-play" id="play-btn" title="Tocar / Pausar">
+        <!-- Ícone de Play -->
+        <svg id="play-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <!-- Ícone de Pause -->
+        <svg id="pause-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+
+      <!-- Botão Avançar -->
+      <button class="btn-control" id="next-btn" title="Avançar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+        </svg>
+      </button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

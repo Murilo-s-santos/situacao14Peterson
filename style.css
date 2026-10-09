@@ -1,0 +1,168 @@
+/* Resets globais e definição de fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1e; /* Fundo escuro idêntico ao da imagem */
+  color: #ffffff;
+}
+
+/* Card centralizado do Player */
+.player-card {
+  width: 320px;
+  background: linear-gradient(180deg, #2b2746 0%, #201d36 100%);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container cinza onde fica a imagem da capa e a badge */
+.cover-container {
+  width: 100%;
+  height: 240px;
+  background-color: #d1d2da;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Badge indicadora de estado ('Pausado' / 'Tocando') */
+.status-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(55, 60, 72, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+/* Imagem da capa */
+.cover-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Informações da faixa */
+.track-info {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.track-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.track-artist {
+  font-size: 0.88rem;
+  color: #9d98b2;
+}
+
+/* Área de progresso */
+.progress-section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.progress-bar-wrapper {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: #9d98b2;
+}
+
+/* Botões de controle */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.btn-control {
+  background: none;
+  border: none;
+  color: #9d98b2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-control:hover {
+  color: #ffffff;
+}
+
+.btn-control:active {
+  transform: scale(0.9);
+}
+
+/* Botão circular de Play com efeito Glow/Brilho */
+.btn-play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #7b61ff;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(123, 97, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-play:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(123, 97, 255, 0.8);
+}
+
+.btn-play:active {
+  transform: scale(0.95);
+}
